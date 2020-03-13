@@ -1,0 +1,123 @@
+html {
+  background-color: #001f3f;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  font-family: sans-serif;
+  color: #ff4136;
+}
+
+.container {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.grid {
+  margin-top: 10vh;
+  width: 100vw;
+  height: 30vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr) [5];
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.grid .col-1 {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  background-color: #85144b;
+  width: 100%;
+  offset-path: path("M-500,-40 C-50,70 70,70 70,-40");
+  -webkit-animation: toggle 3000ms infinite alternate ease-in-out;
+  animation: toggle 3000ms infinite alternate ease-in-out;
+}
+
+.grid .col-1 {
+  -webkit-transition: color 0.1s ease;
+  transition: color 0.1s ease;
+}
+
+.grid .col-1:hover {
+  background-color: #111111;
+}
+
+.grid .col-2 {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  background-color: #ff4136;
+  width: 40%;
+  offset-path: path("M5,10 C10,50 100,0 100,50");
+  -webkit-animation: toggle 3000ms infinite alternate ease-in-out;
+  animation: toggle 3000ms infinite alternate ease-in-out;
+}
+
+.grid .col-2 {
+  -webkit-transition: color 0.1s ease;
+  transition: color 0.1s ease;
+}
+
+.grid .col-2:hover {
+  background-color: #3d9970;
+}
+
+.grid .col-5 {
+  -ms-grid-column: 5;
+  grid-column: 5;
+  background-color: #ff851b;
+  width: 40%;
+  color: gray;
+  -webkit-animation: toggle 3000ms infinite alternate ease-in-out;
+  animation: toggle 3000ms infinite alternate ease-in-out;
+  offset-path: path("M-50,-40 C-50,70 70,70 70,-40");
+}
+
+.grid .col-5 {
+  -webkit-transition: color 0.1s ease;
+  transition: color 0.1s ease;
+}
+
+.grid .col-5:hover {
+  background-color: black;
+}
+
+@-webkit-keyframes toggle {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+@keyframes toggle {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.giphy-holder {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100px;
+  width: 100px;
+}
+/*# sourceMappingURL=style.css.map */
