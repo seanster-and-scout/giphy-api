@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="assets/style.css" />
-    <title>API</title>
-  </head>
-  <body>
-    <header>
-      <div class="title">
-        <h1>Gifs</h1>
-      </div>
-    </header>
-    <div class="container">
-      <input type="text" placeholder="Search.." class="search" />
-      <button type="submit" class="submit">Search</button>
-    </div>
-    <div class="grid">
-      <div class="col-1"></div>
-      <div class="col-2"></div>
-      <div class="col-3"></div>
-      <div class="col-4"></div>
-      <div class="col-5"></div>
-    </div>
 
-    <div class="button-holder"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="assets/style.css" />
 
-    <div class="giphy-holder"></div>
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <script src="assets/script.js"></script>
-  </body>
+  <title>API</title>
+</head>
+
+<body>
+  <header>
+    <div class="title">
+      <h1>Gifs</h1>
+    </div>
+  </header>
+  <div class="container">
+    <input type="text" placeholder="Search.." class="search" />
+    <button type="submit" class="submit">Search</button>
+  </div>
+
+  <div class="grid giphy-holder" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 10}'>
+  </div>
+
+  <div class="button-holder"></div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+
+  <script src="assets/script.js"></script>
+</body>
+
 </html>

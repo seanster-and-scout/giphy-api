@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   let buttonsArray = [];
 
   function drawButtons() {
@@ -11,7 +11,7 @@ $(document).ready(function() {
   }
   drawButtons();
 
-  $(".button-holder").on("click", ".standard", function(event) {
+  $(".button-holder").on("click", ".standard", function (event) {
     event.preventDefault();
     let searchTerm = $(this).text();
     console.log(searchTerm);
@@ -23,17 +23,18 @@ $(document).ready(function() {
       method: "GET"
     })
       // After data comes back from the request
-      .then(function(response) {
+      .then(function (response) {
         for (let i = 0; i < response.data.length; i++) {
+          let gridItem = $("<div>").attr("class", "grid-item");
           let image = $("<img>").attr("class", "giphies");
-
           image.attr("src", response.data[i].images.fixed_width_small);
-          $(".giphy-holder").prepend(image);
+          gridItem.append(image);
+          $(".giphy-holder").prepend(gridItem);
         }
       });
   });
 
-  $(".submit").on("click", function(event) {
+  $(".submit").on("click", function (event) {
     event.preventDefault();
     let searchTerm = $(".search")
       .val()
@@ -46,15 +47,17 @@ $(document).ready(function() {
       method: "GET"
     })
       // After data comes back from the request
-      .then(function(response) {
+      .then(function (response) {
         addButton(searchTerm);
         for (let i = 0; i < response.data.length; i++) {
+          let gridItem = $("<div>").attr("class", "grid-item");
           let image = $("<img>");
           let still = image
             .attr("src", response.data[i].images.downsized_still.url)
             .attr("alt", "false")
             .attr("id", `${response.data[i].id}`);
-          $(still).on("click", function(event) {
+          gridItem.append(still);
+          $(still).on("click", function (event) {
             event.preventDefault();
             if ($(`#${event.target.id}`).attr("alt") == "false") {
               $(`#${event.target.id}`)
@@ -66,7 +69,7 @@ $(document).ready(function() {
                 .attr("src", response.data[i].images.downsized_still.url);
             }
           }); // onClick Ends
-          $(".giphy-holder").prepend(still);
+          $(".giphy-holder").prepend(gridItem);
         } // For Loops Ends
       });
   });

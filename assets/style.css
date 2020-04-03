@@ -110,7 +110,14 @@ html {
   }
 }
 
-.giphy-holder {
+.grid-item {
+ 
+  width: 20%;
+  
+
+}
+
+/* .giphy-holder {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr 1fr 1fr;
@@ -119,5 +126,7 @@ html {
   grid-template-columns: 1fr 1fr 1fr;
   height: 100px;
   width: 100px;
-}
+  padding: 10px;
+  margin: 10px;
+} */
 /*# sourceMappingURL=style.css.map */
