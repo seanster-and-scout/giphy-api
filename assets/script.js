@@ -71,6 +71,13 @@ $(document).ready(function () {
           }); // onClick Ends
           $(".giphy-holder").prepend(gridItem);
         } // For Loops Ends
+
+        $('.grid').masonry({
+          // options
+          itemSelector: '.grid-item',
+          columnWidth: 200,
+          gutter: 10
+        });
       });
   });
   function addButton(buttonName) {

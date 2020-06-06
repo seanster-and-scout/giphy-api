@@ -27,6 +27,8 @@ html {
   -o-transition: $args;
   transition: $args;
 }
+
+/*
 .grid {
   margin-top: 10vh;
   width: 100vw;
@@ -80,7 +82,7 @@ html {
   .col-5:hover {
     background-color: black;
   }
-}
+}*/
 
 @keyframes toggle {
   0% {
@@ -91,6 +93,7 @@ html {
   }
 }
 
+/*
 .giphy-holder {
   display: grid;
 
@@ -99,3 +102,14 @@ html {
   height: 100px;
   width: 100px;
 }
+*/
+
+.grid {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+.grid-item { width: 200px;  }
+
+.grid-item img { width: 100%; }
