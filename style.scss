@@ -1,0 +1,122 @@
+$main-fonts: sans-serif;
+$headings-color: #ff4136;
+$background-color: #001f3f;
+$alternate-color-1: #85144b;
+$alternate-color-2: #ff4136;
+$alternate-color-3: #39cccc;
+$alternate-color-4: #7fdbff;
+$alternate-color-5: #ff851b;
+html {
+  background-color: $background-color;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: $main-fonts;
+  color: $headings-color;
+}
+.container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.flex-form {
+display: flex;
+}
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+
+@keyframes toggle {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+/*
+.giphy-holder {
+  display: grid;
+
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100px;
+  width: 100px;
+}
+*/
+
+.grid {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+.grid-item { width: 200px;  }
+
+.grid-item img { width: 100%; }
+
+/*
+.grid {
+  margin-top: 10vh;
+  width: 100vw;
+  height: 30vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0;
+  grid-template-rows: 1fr;
+
+  .col-1 {
+    grid-column: 1;
+    background-color: $alternate-color-1;
+    width: 100%;
+    offset-path: path("M-500,-40 C-50,70 70,70 70,-40");
+    animation: toggle 3000ms infinite alternate ease-in-out;
+  }
+
+  .col-1 {
+    @include transition(color 0.1s ease);
+  }
+  .col-1:hover {
+    background-color: #111111;
+  }
+
+  .col-2 {
+    grid-column: 2;
+    background-color: $alternate-color-2;
+    width: 40%;
+    offset-path: path("M5,10 C10,50 100,0 100,50");
+    animation: toggle 3000ms infinite alternate ease-in-out;
+  }
+
+  .col-2 {
+    @include transition(color 0.1s ease);
+  }
+  .col-2:hover {
+    background-color: #3d9970;
+  }
+
+  .col-5 {
+    grid-column: 5;
+    background-color: $alternate-color-5;
+    width: 40%;
+    color: gray;
+    animation: toggle 3000ms infinite alternate ease-in-out;
+    offset-path: path("M-50,-40 C-50,70 70,70 70,-40");
+  }
+  .col-5 {
+    @include transition(color 0.1s ease);
+  }
+  .col-5:hover {
+    background-color: black;
+  }
+}*/
